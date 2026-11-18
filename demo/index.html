@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUI — High-Craft Architectural Design System</title>
+  <meta name="description" content="Agent-agnostic high-craft architectural UI design system. Engineering precision, mechanical rolling scrollbars, blueprint ticks, and Houdini themes." />
+
+  <!-- Fonts & Core AUI Stylesheet -->
+  <link rel="stylesheet" href="../aui.css" />
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body class="scanline-bg">
+
+  <!-- ======================================================================
+       HEADER / NAV BAR
+       ====================================================================== -->
+  <header class="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
+    <div class="mx-auto flex max-w-[1280px] items-center justify-between border-x border-line px-6 py-3.5 md:px-10">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 text-ink-strong no-underline">
+        <span class="flex h-8 w-8 items-center justify-center border border-line bg-bg-raised font-mono text-sm font-bold text-accent-ink">
+          AU
+        </span>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-semibold tracking-tight leading-none text-ink-strong">AUI</span>
+          <span class="hud-label text-faint" style="font-size: 8px;">PRECISION DESIGN</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-1 md:flex">
+        <a href="#architecture" class="invert-block px-3 py-1 font-mono text-xs uppercase tracking-wider text-muted no-underline">01 // Architecture</a>
+        <a href="#principles" class="invert-block px-3 py-1 font-mono text-xs uppercase tracking-wider text-muted no-underline">02 // Principles</a>
+        <a href="#showcase" class="invert-block px-3 py-1 font-mono text-xs uppercase tracking-wider text-muted no-underline">03 // Showcase</a>
+        <a href="#pricing" class="invert-block px-3 py-1 font-mono text-xs uppercase tracking-wider text-muted no-underline">04 // Plans</a>
+      </nav>
+
+      <!-- Action & Theme Controls -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggleBtn" type="button" class="invert-block border border-line px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-ink bg-bg">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-accent mr-1.5"></span>
+          <span id="themeToggleLabel">PAPER</span>
+        </button>
+
+        <a href="https://github.com/shahaayush265/aui" target="_blank" rel="noopener noreferrer" class="invert-block border border-line bg-invert-bg text-invert-fg px-4 py-1.5 font-mono text-xs uppercase tracking-widest no-underline hidden sm:inline-flex">
+          GITHUB ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 00: HERO
+         ====================================================================== -->
+    <section id="hero" data-ruler-section="hero" data-ruler-title="HERO" class="relative border-b border-line">
+      <div class="relative mx-auto max-w-[1280px] border-x border-line px-6 py-20 md:px-12 md:py-32">
+        <!-- Corner drafting ticks -->
+        <span aria-hidden="true" class="tick tick-half tick-tl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-tr"></span>
+        <span aria-hidden="true" class="tick tick-half tick-bl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-br"></span>
+
+        <!-- Telemetry Eyebrow -->
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-6">
+          <div class="flex items-center gap-3">
+            <span class="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            <span class="hud-label text-muted">AUI SPECIFICATION // AGENT-AGNOSTIC UI FRAMEWORK</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="hud-label border border-line bg-bg-raised px-2.5 py-1 text-accent-ink">
+              100% REPRODUCIBLE
+            </span>
+            <span class="hud-label border border-line bg-bg-raised px-2.5 py-1 text-faint">
+              REV 2026.11
+            </span>
+          </div>
+        </div>
+
+        <!-- Typography Heading -->
+        <div class="mt-12 max-w-4xl">
+          <h1 class="font-display text-5xl font-medium tracking-tight text-ink-strong sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02]">
+            High-craft UI for <span class="font-serif-italic font-normal text-accent-ink">autonomous</span> agents.
+          </h1>
+
+          <p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl font-normal">
+            A radical synthesis of Swiss architectural drafting boards, precision mechanical gauges, and modern digital brutalism. Designed for humans to love and AI agents to build effortlessly.
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#showcase" class="invert-block border border-line bg-invert-bg text-invert-fg px-6 py-3 font-mono text-xs uppercase tracking-widest no-underline">
+            EXPLORE COMPONENTS →
+          </a>
+          <button id="copyPromptBtn" class="invert-block border border-line bg-bg px-6 py-3 font-mono text-xs uppercase tracking-widest text-ink">
+            COPY AGENT DIRECTIVE
+          </button>
+        </div>
+
+        <!-- Live Telemetry Grid -->
+        <div class="mt-16 grid grid-cols-2 gap-px border border-line bg-line sm:grid-cols-4">
+          <div class="bg-bg p-5 md:p-6">
+            <p class="hud-label text-faint">TOLERANCE</p>
+            <p class="mt-2 font-display text-2xl font-semibold text-ink-strong md:text-3xl">0.5 PX</p>
+            <p class="mt-1 text-xs text-muted font-mono">Sub-pixel raster grid</p>
+          </div>
+          <div class="bg-bg p-5 md:p-6">
+            <p class="hud-label text-faint">SCROLL GAUGE</p>
+            <p class="mt-2 font-display text-2xl font-semibold text-accent-ink md:text-3xl">0-100%</p>
+            <p class="mt-1 text-xs text-muted font-mono">Rolling mechanical odometer</p>
+          </div>
+          <div class="bg-bg p-5 md:p-6">
+            <p class="hud-label text-faint">THEME MORPH</p>
+            <p class="mt-2 font-display text-2xl font-semibold text-ink-strong md:text-3xl">HOUDINI</p>
+            <p class="mt-1 text-xs text-muted font-mono">Interpolated CSS variables</p>
+          </div>
+          <div class="bg-bg p-5 md:p-6">
+            <p class="hud-label text-faint">INTEGRATION</p>
+            <p class="mt-2 font-display text-2xl font-semibold text-ink-strong md:text-3xl">AGNOSTIC</p>
+            <p class="mt-1 text-xs text-muted font-mono">React / Vue / HTML / CSS</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         MARQUEE TICKER RIBBON
+         ====================================================================== -->
+    <div class="marquee bg-bg-raised py-3.5">
+      <div class="marquee-track flex items-center whitespace-nowrap">
+        <span class="inline-flex items-center gap-6 px-6">
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">PRECISION RULER SCROLLBAR</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">1PX HAIRLINE BENTO GRIDS</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">CORNER REGISTRATION TICKS</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">CSS HOUDINI COLOR INTERPOLATION</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">MONOSPACE HUD TELEMETRY</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">SNAPPY CONTRAST INVERSION</span>
+          <span class="text-faint text-xs">✦</span>
+        </span>
+        <span class="inline-flex items-center gap-6 px-6">
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">PRECISION RULER SCROLLBAR</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">1PX HAIRLINE BENTO GRIDS</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">CORNER REGISTRATION TICKS</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">CSS HOUDINI COLOR INTERPOLATION</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">MONOSPACE HUD TELEMETRY</span>
+          <span class="text-faint text-xs">✦</span>
+          <span class="font-mono text-xs uppercase tracking-widest text-ink-strong font-semibold">SNAPPY CONTRAST INVERSION</span>
+          <span class="text-faint text-xs">✦</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         SECTION 01: ARCHITECTURE
+         ====================================================================== -->
+    <section id="architecture" data-ruler-section="architecture" data-ruler-title="ARCHITECTURE" class="relative border-b border-line">
+      <!-- Sticky HUD Eyebrow Header -->
+      <div class="sticky top-12 z-30 border-y border-line bg-bg/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-[1280px] items-center justify-between border-x border-line px-6 py-3 md:px-10">
+          <p class="hud-label text-muted flex items-center">
+            <span class="text-faint">01</span>
+            <span aria-hidden="true" class="mx-2 text-faint">/</span>
+            <span class="text-ink-strong font-semibold">Architecture</span>
+          </p>
+          <p class="hud-label hidden text-faint sm:block">ANATOMY OF THE CRAFT</p>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-[1280px] border-x border-line px-6 py-16 md:px-10 md:py-24">
+        <span aria-hidden="true" class="tick tick-half tick-tl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-tr"></span>
+
+        <h2 class="max-w-3xl font-display text-4xl font-medium tracking-tight text-ink-strong sm:text-5xl md:text-6xl">
+          Engineered down to the <span class="font-serif-italic font-normal text-accent-ink">nanometer</span>.
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-muted">
+          Every screen follows a deterministic typographic and architectural formula designed for zero visual ambiguity.
+        </p>
+
+        <!-- Bento Grid 3 columns -->
+        <div class="hairline-grid mt-12 grid-cols-1 md:grid-cols-3">
+          <!-- Card 1 -->
+          <div class="relative bg-bg p-8">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line text-accent-ink font-mono font-bold text-sm">
+                01
+              </span>
+              <span class="hud-label text-faint">GEOMETRY</span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-medium text-ink-strong">Hairline Planar Grids</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Built using <code>gap-px</code> with container <code>bg-line</code> and child <code>bg-bg</code>. Eliminates doubled borders and renders authentic 1px drafting lines across all device display scales.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative bg-bg p-8">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line text-accent-ink font-mono font-bold text-sm">
+                02
+              </span>
+              <span class="hud-label text-faint">INDICATORS</span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-medium text-ink-strong">Mechanical Odometer</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Replacing the default browser scrollbar with a CAD-grade vertical percentage rail. Features rolling three-column numeric wheels, laser hairline needle, and section anchor jumps.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative bg-bg p-8">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line text-accent-ink font-mono font-bold text-sm">
+                03
+              </span>
+              <span class="hud-label text-faint">PHYSICS</span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-medium text-ink-strong">Houdini CSS Morph</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              Registered <code>@property</code> declarations allow CSS custom properties to undergo mathematical color interpolation without repainting the entire DOM tree or suffering flickering states.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02: PRINCIPLES
+         ====================================================================== -->
+    <section id="principles" data-ruler-section="principles" data-ruler-title="PRINCIPLES" class="relative border-b border-line">
+      <!-- Sticky HUD Eyebrow Header -->
+      <div class="sticky top-12 z-30 border-y border-line bg-bg/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-[1280px] items-center justify-between border-x border-line px-6 py-3 md:px-10">
+          <p class="hud-label text-muted flex items-center">
+            <span class="text-faint">02</span>
+            <span aria-hidden="true" class="mx-2 text-faint">/</span>
+            <span class="text-ink-strong font-semibold">Principles</span>
+          </p>
+          <p class="hud-label hidden text-faint sm:block">BUILT FROM FIRST PRINCIPLES</p>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-[1280px] border-x border-line px-6 py-16 md:px-10 md:py-24">
+        <span aria-hidden="true" class="tick tick-half tick-tl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-tr"></span>
+
+        <h2 class="max-w-3xl font-display text-4xl font-medium tracking-tight text-ink-strong sm:text-5xl md:text-6xl">
+          Six rules for <span class="font-serif-italic font-normal text-accent-ink">flawless</span> execution.
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-muted">
+          Any agent adhering to these immutable constraints will produce websites of unassailable quality.
+        </p>
+
+        <div class="hairline-grid mt-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 01</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">The Editorial Contrast</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Never use pure sans-serif alone. Pair dense mechanical brutalist headings (<code>Archivo</code>) with humanistic italic serif accents (<code>Instrument Serif</code>).
+            </p>
+          </div>
+
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 02</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">Registration Corner Ticks</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Every major bounded container and card gets 11px hairline crosshairs (<code>.tick</code>) placed precisely at corner intersections, referencing engineering blueprints.
+            </p>
+          </div>
+
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 03</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">Tactical Monospace HUD</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Metadata, telemetry tags, section numbers, and specs must strictly utilize monospaced fonts with <code>letter-spacing: 0.15em</code> and uppercase transformation.
+            </p>
+          </div>
+
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 04</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">Instant Snappy Inversion</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Interactive buttons and pills do not perform mushy shadow fades. They flip instantly via <code>120ms linear</code> inversion of foreground and background colors.
+            </p>
+          </div>
+
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 05</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">Dual Authentic Palettes</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Light mode is warm technical drafting paper (<code>#f2f1ee</code>). Dark mode is tactical obsidian and darkroom glass (<code>#121316</code>). No generic grayish tones.
+            </p>
+          </div>
+
+          <div class="bg-bg p-8">
+            <span class="hud-label text-faint">RULE 06</span>
+            <h3 class="mt-4 font-display text-2xl font-medium text-ink-strong">Precision Ruler Scrollbar</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              The scrollbar is an interactive engineering tool with rolling mechanical digits, laser tick marks, and anchor points, gracefully falling back on mobile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 03: SHOWCASE / TOOLS
+         ====================================================================== -->
+    <section id="showcase" data-ruler-section="showcase" data-ruler-title="SHOWCASE" class="relative border-b border-line">
+      <!-- Sticky HUD Eyebrow Header -->
+      <div class="sticky top-12 z-30 border-y border-line bg-bg/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-[1280px] items-center justify-between border-x border-line px-6 py-3 md:px-10">
+          <p class="hud-label text-muted flex items-center">
+            <span class="text-faint">03</span>
+            <span aria-hidden="true" class="mx-2 text-faint">/</span>
+            <span class="text-ink-strong font-semibold">Component Showcase</span>
+          </p>
+          <p class="hud-label hidden text-faint sm:block">COLOR SPECTRUM & APPS</p>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-[1280px] border-x border-line px-6 py-16 md:px-10 md:py-24">
+        <span aria-hidden="true" class="tick tick-half tick-tl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-tr"></span>
+
+        <h2 class="max-w-3xl font-display text-4xl font-medium tracking-tight text-ink-strong sm:text-5xl md:text-6xl">
+          Distinct chromatic <span class="font-serif-italic font-normal text-accent-ink">signatures</span>.
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-muted">
+          Each tool, craft, or product carries its own signature hue while adhering seamlessly to the shared drafting grid.
+        </p>
+
+        <!-- Tools Grid -->
+        <div class="hairline-grid mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Tool 1: PixelStudio Blue -->
+          <div class="app-blue group relative bg-bg p-6 transition-all hover:bg-bg-raised">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line font-mono font-bold text-accent-ink bg-bg-sunken">
+                PX
+              </span>
+              <span class="hud-label text-accent-ink">#2F7BF5</span>
+            </div>
+            <h4 class="mt-6 font-display text-2xl font-medium text-ink-strong group-hover:text-accent-ink transition-colors">PixelStudio</h4>
+            <p class="mt-2 text-sm text-muted">Non-destructive GPU photo and raster manipulation workspace.</p>
+            <div class="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-xs text-faint">
+              <span>NATIVE / WASM</span>
+              <span class="text-accent-ink font-semibold">60 FPS</span>
+            </div>
+          </div>
+
+          <!-- Tool 2: VectorLab Coral -->
+          <div class="app-coral group relative bg-bg p-6 transition-all hover:bg-bg-raised">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line font-mono font-bold text-accent-ink bg-bg-sunken" style="color: #e8573f;">
+                VL
+              </span>
+              <span class="hud-label" style="color: #e8573f;">#E8573F</span>
+            </div>
+            <h4 class="mt-6 font-display text-2xl font-medium text-ink-strong group-hover:text-accent-ink transition-colors">VectorLab</h4>
+            <p class="mt-2 text-sm text-muted">Precision Bezier spline editor and procedural SVG engine.</p>
+            <div class="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-xs text-faint">
+              <span>GPU ACCEL</span>
+              <span style="color: #e8573f;" class="font-semibold">ACTIVE</span>
+            </div>
+          </div>
+
+          <!-- Tool 3: MotionFlow Violet -->
+          <div class="app-purple group relative bg-bg p-6 transition-all hover:bg-bg-raised">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line font-mono font-bold bg-bg-sunken" style="color: #8b5cf6;">
+                MF
+              </span>
+              <span class="hud-label" style="color: #8b5cf6;">#8B5CF6</span>
+            </div>
+            <h4 class="mt-6 font-display text-2xl font-medium text-ink-strong group-hover:text-accent-ink transition-colors">MotionFlow</h4>
+            <p class="mt-2 text-sm text-muted">Real-time color grading and multi-track timeline compositor.</p>
+            <div class="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-xs text-faint">
+              <span>PRORES / AV1</span>
+              <span style="color: #8b5cf6;" class="font-semibold">READY</span>
+            </div>
+          </div>
+
+          <!-- Tool 4: LightRay Amber -->
+          <div class="app-amber group relative bg-bg p-6 transition-all hover:bg-bg-raised">
+            <div class="flex items-center justify-between">
+              <span class="flex h-10 w-10 items-center justify-center border border-line font-mono font-bold bg-bg-sunken" style="color: #f2a516;">
+                LR
+              </span>
+              <span class="hud-label" style="color: #f2a516;">#F2A516</span>
+            </div>
+            <h4 class="mt-6 font-display text-2xl font-medium text-ink-strong group-hover:text-accent-ink transition-colors">LightRay</h4>
+            <p class="mt-2 text-sm text-muted">Volumetric lighting and real-time ray-traced shadow simulator.</p>
+            <div class="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-xs text-faint">
+              <span>VULKAN / DX12</span>
+              <span style="color: #f2a516;" class="font-semibold">SYNCED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 04: PRICING
+         ====================================================================== -->
+    <section id="pricing" data-ruler-section="pricing" data-ruler-title="PRICING" class="relative border-b border-line">
+      <!-- Sticky HUD Eyebrow Header -->
+      <div class="sticky top-12 z-30 border-y border-line bg-bg/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-[1280px] items-center justify-between border-x border-line px-6 py-3 md:px-10">
+          <p class="hud-label text-muted flex items-center">
+            <span class="text-faint">04</span>
+            <span aria-hidden="true" class="mx-2 text-faint">/</span>
+            <span class="text-ink-strong font-semibold">Tiers & Licensing</span>
+          </p>
+          <p class="hud-label hidden text-faint sm:block">PERMISSIVE OPEN SOURCE & PRO</p>
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-[1280px] border-x border-line px-6 py-16 md:px-10 md:py-24">
+        <span aria-hidden="true" class="tick tick-half tick-tl"></span>
+        <span aria-hidden="true" class="tick tick-half tick-tr"></span>
+
+        <h2 class="max-w-3xl font-display text-4xl font-medium tracking-tight text-ink-strong sm:text-5xl md:text-6xl">
+          Clear, honest <span class="font-serif-italic font-normal text-accent-ink">tiers</span>.
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-muted">
+          Every plan card features tinted ambient glow boundaries and precision monospace feature matrices.
+        </p>
+
+        <div class="hairline-grid mt-12 grid-cols-1 md:grid-cols-3">
+          <!-- Tier 1: Basic -->
+          <div class="plan-card plan-basic p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="plan-badge">COMMUNITY</span>
+                <span class="hud-label text-faint">TIER 01</span>
+              </div>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display text-5xl font-semibold text-ink-strong">$0</span>
+                <span class="font-mono text-xs text-muted">forever free</span>
+              </div>
+              <p class="mt-4 text-sm text-muted">For individual creators, open-source developers, and AI agents.</p>
+              <div class="my-8 h-px bg-line"></div>
+              <ul class="space-y-3 font-mono text-xs text-ink list-none p-0">
+                <li class="flex items-center gap-2"><span>✦</span> Full AUI Core CSS Tokens</li>
+                <li class="flex items-center gap-2"><span>✦</span> Corner Registration Ticks</li>
+                <li class="flex items-center gap-2"><span>✦</span> Hairline Bento Grid System</li>
+                <li class="flex items-center gap-2"><span>✦</span> MIT License</li>
+              </ul>
+            </div>
+            <button class="invert-block mt-8 w-full border border-line py-3 font-mono text-xs uppercase tracking-widest bg-bg text-ink">
+              DOWNLOAD SKILL
+            </button>
+          </div>
+
+          <!-- Tier 2: Pro (Highlighted) -->
+          <div data-highlight="true" class="plan-card plan-pro p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="plan-badge">PRO CRAFT</span>
+                <span class="hud-label font-semibold text-accent-ink">POPULAR</span>
+              </div>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display text-5xl font-semibold text-ink-strong">$29</span>
+                <span class="font-mono text-xs text-muted">/ month</span>
+              </div>
+              <p class="mt-4 text-sm text-muted">For production engineering teams and commercial web applications.</p>
+              <div class="my-8 h-px bg-line"></div>
+              <ul class="space-y-3 font-mono text-xs text-ink list-none p-0">
+                <li class="flex items-center gap-2"><span>✦</span> Everything in Community</li>
+                <li class="flex items-center gap-2"><span>✦</span> Precision Ruler Scrollbar</li>
+                <li class="flex items-center gap-2"><span>✦</span> Rolling Odometer Digits</li>
+                <li class="flex items-center gap-2"><span>✦</span> React & Vue Component Library</li>
+                <li class="flex items-center gap-2"><span>✦</span> CSS Houdini Theme Morphing</li>
+              </ul>
+            </div>
+            <button class="invert-block mt-8 w-full border border-line py-3 font-mono text-xs uppercase tracking-widest bg-invert-bg text-invert-fg">
+              START BUILDING NOW
+            </button>
+          </div>
+
+          <!-- Tier 3: Enterprise -->
+          <div class="plan-card plan-max p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="plan-badge">ENTERPRISE</span>
+                <span class="hud-label text-faint">CUSTOM</span>
+              </div>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display text-5xl font-semibold text-ink-strong">$149</span>
+                <span class="font-mono text-xs text-muted">/ month</span>
+              </div>
+              <p class="mt-4 text-sm text-muted">Custom architectural designs, MCP agent server integration, and SLA.</p>
+              <div class="my-8 h-px bg-line"></div>
+              <ul class="space-y-3 font-mono text-xs text-ink list-none p-0">
+                <li class="flex items-center gap-2"><span>✦</span> Custom Brand Token Derivation</li>
+                <li class="flex items-center gap-2"><span>✦</span> Agentic Design Pipeline CI/CD</li>
+                <li class="flex items-center gap-2"><span>✦</span> Dedicated Engineering Support</li>
+                <li class="flex items-center gap-2"><span>✦</span> Commercial Enterprise License</li>
+              </ul>
+            </div>
+            <button class="invert-block mt-8 w-full border border-line py-3 font-mono text-xs uppercase tracking-widest bg-bg text-ink">
+              TALK TO AN AGENT
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TERMINAL / INSTALLATION SECTION
+         ====================================================================== -->
+    <section class="relative border-b border-line bg-bg-raised">
+      <div class="mx-auto max-w-[1280px] border-x border-line px-6 py-16 md:px-12 md:py-20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <span class="hud-label text-accent-ink">CLI // INSTALLATION</span>
+            <h3 class="mt-2 font-display text-3xl font-medium text-ink-strong">Drop AUI into any codebase</h3>
+            <p class="mt-1 text-sm text-muted">Instantly install components, styles, and agent prompts into React, Next.js, or HTML.</p>
+          </div>
+
+          <div class="border border-line bg-bg p-4 font-mono text-xs text-ink-strong flex items-center justify-between min-w-[320px]">
+            <code>npx aui-skill add all</code>
+            <button id="copyCliBtn" class="hud-label text-accent-ink border border-line px-2 py-1 ml-4 hover:bg-invert-bg hover:text-invert-fg">
+              COPY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="border-t border-line bg-bg py-12">
+    <div class="mx-auto flex max-w-[1280px] flex-col justify-between gap-6 border-x border-line px-6 md:flex-row md:items-center md:px-10">
+      <div class="flex items-center gap-3">
+        <span class="flex h-6 w-6 items-center justify-center border border-line font-mono text-xs font-bold text-accent-ink">AU</span>
+        <span class="font-mono text-xs text-muted">AUI &copy; 2026. Architectural Precision Design Language.</span>
+      </div>
+
+      <div class="flex items-center gap-4 font-mono text-xs text-faint">
+        <span>STATUS: SYSTEM OPERATIONAL</span>
+        <span>•</span>
+        <span>AGENT READY</span>
+        <span>•</span>
+        <a href="https://github.com/shahaayush265/aui" class="text-accent-ink hover:underline">REPO</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../aui.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

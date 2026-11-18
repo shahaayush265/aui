@@ -1,0 +1,32 @@
+{
+  "name": "aui-design",
+  "version": "1.0.0",
+  "description": "Architectural Precision & High-Craft UI Design System — Packaged into an agent-agnostic skill and component library.",
+  "main": "aui.js",
+  "style": "aui.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahaayush265/aui.git"
+  },
+  "keywords": [
+    "aui",
+    "design-system",
+    "agent-skill",
+    "architectural-ui",
+    "brutalism",
+    "mechanical-scrollbar",
+    "bento-grid",
+    "tailwind",
+    "react",
+    "vue"
+  ],
+  "author": "Aayush Shah <shahaayush265@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahaayush265/aui/issues"
+  },
+  "homepage": "https://github.com/shahaayush265/aui#readme"
+}
